@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Dune",
+    "imagen": "dune.jpg",
+    "genero": "Aventura",
+    "sinopsis": "Un joven emprende una misión para salvar su mundo.",
+    "trailer": "https://www.youtube.com/embed/mSY_NbSmaUI"
+  },
+  {
+    "id": 2,
+    "titulo": "50 primeras citas",
+    "imagen": "50-primeras-citas.jpg",
+    "genero": "Comedia",
+    "sinopsis": "Henry se enamora de Lucy, una mujer con pérdida de memoria a corto plazo.",
+    "trailer": "https://www.youtube.com/embed/17KJk3ErIx0"
+  },
+  {
+    "id": 3,
+    "titulo": "Batman Caballero de la Noche",
+    "imagen": "batman-caballero-de-la-noche.webp",
+    "genero": "Acción",
+    "sinopsis": "La película comienza con el violento robo de uno de los bancos de la mafia por una banda de payasos.",
+    "trailer": "https://www.youtube.com/embed/dzQtWkpc2-c"
+  }
+]
