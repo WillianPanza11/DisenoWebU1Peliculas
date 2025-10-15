@@ -3,24 +3,78 @@
     "id": 1,
     "titulo": "Dune",
     "imagen": "dune.jpg",
-    "genero": "Aventura",
+    "generos": ["Ciencia Ficción", "Aventura", "Drama"],
     "sinopsis": "Un joven emprende una misión para salvar su mundo.",
-    "trailer": "https://www.youtube.com/embed/mSY_NbSmaUI"
+    "trailer": "https://www.youtube.com/embed/mSY_NbSmaUI",
+    "estreno": "2024-10-01",
+    "precios": {
+      "estrenos": 12.50,
+      "normal": 5.00
+    }
   },
   {
     "id": 2,
     "titulo": "50 primeras citas",
     "imagen": "50-primeras-citas.jpg",
-    "genero": "Comedia",
+    "generos": ["Comedia", "Romance"],
     "sinopsis": "Henry se enamora de Lucy, una mujer con pérdida de memoria a corto plazo.",
-    "trailer": "https://www.youtube.com/embed/17KJk3ErIx0"
+    "trailer": "https://www.youtube.com/embed/17KJk3ErIx0",
+    "estreno": "2024-10-14",
+    "precios": {
+      "estrenos": 10.00,
+      "normal": 5.00
+    }
   },
   {
     "id": 3,
     "titulo": "Batman Caballero de la Noche",
     "imagen": "batman-caballero-de-la-noche.webp",
-    "genero": "Acción",
+    "generos": ["Acción", "Crimen", "Drama"],
     "sinopsis": "La película comienza con el violento robo de uno de los bancos de la mafia por una banda de payasos.",
-    "trailer": "https://www.youtube.com/embed/dzQtWkpc2-c"
+    "trailer": "https://www.youtube.com/embed/dzQtWkpc2-c",
+    "estreno": "2024-07-10",
+    "precios": {
+      "estrenos": 11.00,
+      "normal": 5.50
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "El Origen",
+    "imagen": "origen.jpg",
+    "generos": ["Acción", "Ciencia Ficción", "Suspenso"],
+    "sinopsis": "Dom Cobb es un ladrón con la rara habilidad de entrar en los sueños de las personas y robar sus secretos más profundos.",
+    "trailer": "https://www.youtube.com/embed/YoHD9XEInc0",
+    "estreno": "2024-08-20",
+    "precios": {
+      "estrenos": 10.50,
+      "normal": 5.00
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "Forrest Gump",
+    "imagen": "gump.png",
+    "generos": ["Drama", "Romance"],
+    "sinopsis": "Forrest Gump, un hombre con un coeficiente intelectual bajo, narra las historias de su vida.",
+    "trailer": "https://www.youtube.com/embed/bLvqoHBptjg",
+    "estreno": "2024-09-15",
+    "precios": {
+      "estrenos": 9.00,
+      "normal": 4.50
+    }
+  }, 
+  {
+    "id": 4,
+    "titulo": "Oppenheimer",
+    "imagen": "oppenheimer.jpg",
+    "generos": ["Drama", "Historia", "Biografía"],
+    "sinopsis": "La historia del físico J. Robert Oppenheimer y su papel en el desarrollo de la bomba atómica durante la Segunda Guerra Mundial. La película explora su brillante mente científica, los dilemas morales que enfrentó al crear un arma de destrucción masiva, y las consecuencias personales y políticas que tuvo que afrontar durante la era de la Guerra Fría y las audiencias de seguridad.",
+    "trailer": "https://www.youtube.com/embed/uYPbbksJxIg",
+    "estreno": "2024-09-20",
+    "precios": {
+      "estrenos": 13.00,
+      "normal": 9.00
+    }
   }
 ]
