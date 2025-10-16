@@ -6,7 +6,7 @@
     "generos": ["Ciencia Ficción", "Aventura", "Drama"],
     "sinopsis": "Un joven emprende una misión para salvar su mundo.",
     "trailer": "https://www.youtube.com/embed/mSY_NbSmaUI",
-    "estreno": "2024-10-01",
+    "estreno": "2025-10-01",
     "precios": {
       "estrenos": 12.50,
       "normal": 5.00
@@ -19,7 +19,7 @@
     "generos": ["Comedia", "Romance"],
     "sinopsis": "Henry se enamora de Lucy, una mujer con pérdida de memoria a corto plazo.",
     "trailer": "https://www.youtube.com/embed/17KJk3ErIx0",
-    "estreno": "2024-10-14",
+    "estreno": "2025-10-01",
     "precios": {
       "estrenos": 10.00,
       "normal": 5.00
@@ -65,7 +65,7 @@
     }
   }, 
   {
-    "id": 4,
+    "id": 6,
     "titulo": "Oppenheimer",
     "imagen": "oppenheimer.jpg",
     "generos": ["Drama", "Historia", "Biografía"],
@@ -75,6 +75,32 @@
     "precios": {
       "estrenos": 13.00,
       "normal": 9.00
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "El Gran Gatsby",
+    "imagen": "gran.jpeg",
+    "generos": ["Drama", "Romance"],
+    "sinopsis": "Un misterioso millonario organiza fiestas extravagantes en su mansión de Long Island.",
+    "trailer": "https://www.youtube.com/embed/rARN6agiW7o",
+    "estreno": "2024-10-05",
+    "precios": {
+      "estrenos": 9.50,
+      "normal": 4.75
+    }
+  },
+  {
+    "id": 8,
+    "titulo": "La La Land",
+    "imagen": "la la land.jpg",
+    "generos": ["Comedia", "Drama", "Musical"],
+    "sinopsis": "Una aspirante a actriz y un músico de jazz luchan por alcanzar sus sueños en Los Ángeles.",
+    "trailer": "https://www.youtube.com/embed/0pdqf4P9MB8",
+    "estreno": "2024-11-01",
+    "precios": {
+      "estrenos": 10.00,
+      "normal": 5.00
     }
   }
 ]
