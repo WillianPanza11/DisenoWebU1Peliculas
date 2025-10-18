@@ -5,38 +5,151 @@
   <title>Contacto - CinePlus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .error-message {
+      color: #dc3545;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+      display: none;
+    }
+    .error-message.show {
+      display: block;
+    }
+    .form-control.is-invalid {
+      border-color: #dc3545;
+    }
+    .form-control.is-valid {
+      border-color: #198754;
+    }
+  </style>
 </head>
 <body>
+  
+  <!-- Navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">
+      🎬 CinePlus
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">
+            🏠 Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="renta.html">
+            🎥 Rentar
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contacto.html">
+            📧 Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Header -->
+  <header class="bg-primary text-white text-center p-4">
+    <h1>📧 Contáctanos</h1>
+    <p class="lead">Estamos aquí para ayudarte</p>
+  </header>
+
   <div class="container py-5">
-    <h2 class="mb-4">Contáctanos</h2>
-    <form id="form-contacto" novalidate>
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" required>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        
+        <div class="card shadow-lg">
+          <div class="card-body p-4">
+            <h2 class="mb-4 text-center">Envíanos un Mensaje</h2>
+            
+            <form id="form-contacto" novalidate>
+              
+              <!-- Campo Nombre -->
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo *</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="nombre" 
+                  placeholder="Ej: Juan Pérez"
+                  required>
+                <div class="error-message" id="error-nombre"></div>
+              </div>
+
+              <!-- Campo Email -->
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico *</label>
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  id="correo" 
+                  placeholder="ejemplo@correo.com"
+                  required>
+                <div class="error-message" id="error-correo"></div>
+              </div>
+
+              <!-- Campo Mensaje -->
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">
+                  Mensaje * 
+                  <small class="text-muted">(entre 20 y 50 caracteres)</small>
+                </label>
+                <textarea 
+                  class="form-control" 
+                  id="mensaje" 
+                  rows="4" 
+                  placeholder="Escribe tu mensaje aquí..."
+                  required></textarea>
+                <div class="d-flex justify-content-between align-items-center mt-1">
+                  <div class="error-message" id="error-mensaje"></div>
+                  <small class="text-muted">
+                    <span id="contador-caracteres">0</span>/50 caracteres
+                  </small>
+                </div>
+              </div>
+
+              <!-- Botón -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  📧 Enviar Mensaje
+                </button>
+              </div>
+
+              <!-- Alerta de éxito -->
+              <div id="alerta" class="alert alert-success mt-3" style="display: none;">
+                <strong>✅ ¡Mensaje enviado!</strong> Nos pondremos en contacto contigo pronto.
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- Info adicional -->
+        <div class="text-center mt-4">
+          <p class="text-muted">
+            <small>* Todos los campos son obligatorios</small>
+          </p>
+        </div>
+
       </div>
-      <div class="mb-3">
-        <label for="correo" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="correo" required>
-      </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-      <div id="alerta" class="alert alert-success mt-3 d-none">Mensaje enviado con éxito.</div>
-    </form>
+    </div>
   </div>
 
+  <footer class="bg-dark text-center text-white py-3 mt-5">
+    <small>&copy; 2025 CinePlus. Todos los derechos reservados.</small>
+  </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script>
-    $('#form-contacto').on('submit', function (e) {
-      e.preventDefault();
-      if (this.checkValidity()) {
-        $('#alerta').removeClass('d-none').hide().fadeIn();
-        setTimeout(() => $('#alerta').fadeOut(), 3000);
-        this.reset();
-      }
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/contacto.js"></script>
 </body>
 </html>

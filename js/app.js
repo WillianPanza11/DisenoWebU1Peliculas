@@ -21,10 +21,6 @@ function esPeliculaNueva(fechaEstreno) {
   return diferenciaDias < 30;
 }
 
-// Calcular el precio de la entrada actual
-/*function calcularPrecio(precios, fechaEstreno) {
-  return esPeliculaNueva(fechaEstreno) ? precios.estrenos : precios.normal;
-}*/
 // Función para calcular el precio actual
 function calcularPrecio(fechaEstreno, precios) {
   // Validación: si precios no existe o está vacío
@@ -46,6 +42,24 @@ function generarInsigniasGeneros(generos) {
 }
 
 $(document).ready(function () {
+  // Alerta de Bienvenida
+  // Verificar si es la primera vez que visita
+  const yaVisito = localStorage.getItem('bienvenidaMostrada');
+
+  if (!yaVisito) {
+    console.log("🎉 Primera visita, mostrando bienvenida");
+
+    // Mostrar el modal de bienvenida
+    const modalBienvenida = new bootstrap.Modal(document.getElementById('modalBienvenida'));
+    modalBienvenida.show();
+
+    // Guardar en localStorage que ya vio la bienvenida
+    localStorage.setItem('bienvenidaMostrada', 'true');
+
+    console.log("✅ Bienvenida guardada en localStorage");
+  } else {
+    console.log("👋 Ya visitó antes, no mostrar bienvenida");
+  }
   // Mostrar el spinner (ya está visible por defecto)
   $("#spinner-carga").show();
   $("#lista-peliculas").hide();
@@ -63,7 +77,7 @@ $(document).ready(function () {
           const hoy = new Date();
           const estreno = new Date(peli.estreno);
           const dias = Math.floor((hoy - estreno) / (1000 * 60 * 60 * 24));
-  
+
           // Calcular precio y estado de la película
           const precioActual = calcularPrecio(peli.estreno, peli.precios);
           const badgeEstreno = esPeliculaNueva(peli.estreno)
@@ -83,8 +97,22 @@ $(document).ready(function () {
           <p class="card-text text-truncate">${peli.sinopsis}</p>
           <div class="d-flex justify-content-between align-items-center mt-3">
             <span class="h5 mb-0 text-primary">$${precioActual.toFixed(2)}</span>
-            <a href="pages/detalle.html?id=${peli.id}" class="btn btn-primary btn-sm">Ver más</a>
           </div>
+
+
+          <!-- Agregar boton del trailer -->
+          <div class="d-grid gap-2">
+              <button 
+                class="btn btn-outline-danger btn-sm btn-ver-trailer" 
+                data-trailer="${peli.trailer}"
+                data-titulo="${peli.titulo}"
+                data-id="${peli.id}">
+                🎬 Ver Tráiler
+              </button>
+              <a href="pages/detalle.html?id=${peli.id}" class="btn btn-primary btn-sm">
+                Ver más
+              </a>
+            </div>
         </div>
       </div>
     </div>`;
@@ -93,6 +121,29 @@ $(document).ready(function () {
         // Ocultar spinner y mostrar películas con animación
         $("#spinner-carga").fadeOut(500, function () {
           $("#lista-peliculas").html(html).hide().fadeIn(1000);
+          // Event Listener para los botones de tráiler
+          $(".btn-ver-trailer").on("click", function () {
+            const trailer = $(this).data("trailer");
+            const titulo = $(this).data("titulo");
+            const id = $(this).data("id");
+
+            console.log("🎬 Abriendo tráiler de:", titulo);
+
+            // Actualizar contenido del modal
+            $("#modalTrailerTitulo").text(`Tráiler: ${titulo}`);
+            $("#modalTrailerVideo").attr("src", trailer);
+            $("#modalTrailerVerMas").attr("href", `pages/detalle.html?id=${id}`);
+
+            // Mostrar el modal
+            const modal = new bootstrap.Modal(document.getElementById('modalTrailer'));
+            modal.show();
+
+            // Limpiar video cuando se cierra el modal
+            $("#modalTrailer").on("hidden.bs.modal", function () {
+              $("#modalTrailerVideo").attr("src", "");
+              console.log("✅ Modal cerrado, video limpiado");
+            });
+          });
         });
       },
       error: function (xhr, status, error) {

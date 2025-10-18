@@ -1,0 +1,219 @@
+[
+  {
+    "peliculaId": 1,
+    "autor": "María González",
+    "comentario": "Una obra maestra de la ciencia ficción. Visualmente impresionante y con una historia profunda que te hace reflexionar sobre el poder y el destino.",
+    "calificacion": 5,
+    "fecha": "2025-10-10"
+  },
+  {
+    "peliculaId": 1,
+    "autor": "Carlos Ramírez",
+    "comentario": "Excelente adaptación del libro. Las actuaciones son soberbias y la cinematografía es espectacular. Totalmente recomendada.",
+    "calificacion": 5,
+    "fecha": "2025-10-08"
+  },
+  {
+    "peliculaId": 1,
+    "autor": "Ana Torres",
+    "comentario": "Muy buena película, aunque un poco lenta en algunas partes. La segunda parte promete ser aún mejor.",
+    "calificacion": 4,
+    "fecha": "2025-10-05"
+  },
+  {
+    "peliculaId": 1,
+    "autor": "Diego Morales",
+    "comentario": "Impresionante en todos los aspectos: actuaciones, efectos visuales, banda sonora. Denis Villeneuve es un genio.",
+    "calificacion": 5,
+    "fecha": "2025-10-03"
+  },
+  {
+    "peliculaId": 2,
+    "autor": "Laura Sánchez",
+    "comentario": "Una comedia romántica encantadora. Drew Barrymore y Adam Sandler tienen una química increíble en pantalla.",
+    "calificacion": 4,
+    "fecha": "2025-10-12"
+  },
+  {
+    "peliculaId": 2,
+    "autor": "Roberto Silva",
+    "comentario": "Película muy tierna y emotiva. Te hace creer en el amor verdadero. Perfecta para ver en pareja.",
+    "calificacion": 5,
+    "fecha": "2025-10-11"
+  },
+  {
+    "peliculaId": 2,
+    "autor": "Patricia Vega",
+    "comentario": "Divertida y con un mensaje hermoso. La actuación de Barrymore es conmovedora.",
+    "calificacion": 4,
+    "fecha": "2025-10-09"
+  },
+  {
+    "peliculaId": 3,
+    "autor": "José Hernández",
+    "comentario": "La mejor película de Batman jamás hecha. Heath Ledger como el Joker es absolutamente brillante e inolvidable.",
+    "calificacion": 5,
+    "fecha": "2025-08-15"
+  },
+  {
+    "peliculaId": 3,
+    "autor": "Sofía Martínez",
+    "comentario": "Una obra maestra del cine de superhéroes. Christopher Nolan llevó el género a otro nivel con esta película.",
+    "calificacion": 5,
+    "fecha": "2025-08-12"
+  },
+  {
+    "peliculaId": 3,
+    "autor": "Miguel Ángel Cruz",
+    "comentario": "Épica en todos los sentidos. Las escenas de acción son increíbles y la historia es profundamente filosófica.",
+    "calificacion": 5,
+    "fecha": "2025-08-10"
+  },
+  {
+    "peliculaId": 3,
+    "autor": "Elena Díaz",
+    "comentario": "Un poco oscura para mi gusto, pero no se puede negar que es una película magistral. Heath Ledger merece todos los elogios.",
+    "calificacion": 4,
+    "fecha": "2025-08-08"
+  },
+  {
+    "peliculaId": 4,
+    "autor": "Fernando López",
+    "comentario": "Christopher Nolan crea una experiencia cinematográfica inolvidable. Cillian Murphy está fenomenal en el papel principal.",
+    "calificacion": 5,
+    "fecha": "2025-10-01"
+  },
+  {
+    "peliculaId": 4,
+    "autor": "Gabriela Rojas",
+    "comentario": "Impactante y reflexiva. Te hace pensar sobre las consecuencias de nuestros actos. Película obligatoria.",
+    "calificacion": 5,
+    "fecha": "2025-09-28"
+  },
+  {
+    "peliculaId": 4,
+    "autor": "Ricardo Mendoza",
+    "comentario": "Excelente biografía histórica. Las actuaciones son de primer nivel y la dirección es impecable.",
+    "calificacion": 4,
+    "fecha": "2025-09-25"
+  },
+  {
+    "peliculaId": 4,
+    "autor": "Claudia Paredes",
+    "comentario": "Densa pero fascinante. Requiere atención completa, pero vale totalmente la pena.",
+    "calificacion": 4,
+    "fecha": "2025-09-22"
+  },
+  {
+    "peliculaId": 5,
+    "autor": "Valentina Castro",
+    "comentario": "¡Absolutamente increíble! Una película divertida, colorida y con un mensaje feminista poderoso. Margot Robbie brilla.",
+    "calificacion": 5,
+    "fecha": "2025-10-02"
+  },
+  {
+    "peliculaId": 5,
+    "autor": "Andrés Jiménez",
+    "comentario": "Sorprendentemente profunda para ser una película de Barbie. Greta Gerwig es una directora brillante.",
+    "calificacion": 5,
+    "fecha": "2025-09-30"
+  },
+  {
+    "peliculaId": 5,
+    "autor": "Carolina Núñez",
+    "comentario": "Divertida y emotiva a partes iguales. La banda sonora es pegajosa y las actuaciones son excelentes.",
+    "calificacion": 4,
+    "fecha": "2025-09-28"
+  },
+  {
+    "peliculaId": 5,
+    "autor": "Pablo Ortiz",
+    "comentario": "Una comedia inteligente que también te hace reflexionar. Ryan Gosling es hilarante como Ken.",
+    "calificacion": 4,
+    "fecha": "2025-09-26"
+  },
+  {
+    "peliculaId": 6,
+    "autor": "Daniela Flores",
+    "comentario": "Un cierre perfecto para la trilogía. Emotiva, divertida y llena de acción. James Gunn lo volvió a lograr.",
+    "calificacion": 5,
+    "fecha": "2025-09-05"
+  },
+  {
+    "peliculaId": 6,
+    "autor": "Tomás Vargas",
+    "comentario": "La mejor de las tres películas. La historia de Rocket es conmovedora y las escenas de acción son espectaculares.",
+    "calificacion": 5,
+    "fecha": "2025-09-03"
+  },
+  {
+    "peliculaId": 6,
+    "autor": "Isabel Reyes",
+    "comentario": "Muy buena, aunque un poco larga. El humor de Marvel sigue siendo excelente.",
+    "calificacion": 4,
+    "fecha": "2025-09-01"
+  },
+  {
+    "peliculaId": 6,
+    "autor": "Javier Campos",
+    "comentario": "Divertida y emotiva. Un digno final para estos personajes que hemos llegado a amar.",
+    "calificacion": 4,
+    "fecha": "2025-08-30"
+  },
+  {
+    "peliculaId": 7,
+    "autor": "Camila Ruiz",
+    "comentario": "Visualmente deslumbrante. La animación es de otro nivel y la historia es aún mejor que la primera película.",
+    "calificacion": 5,
+    "fecha": "2025-09-20"
+  },
+  {
+    "peliculaId": 7,
+    "autor": "Sebastián Mora",
+    "comentario": "Una obra maestra de la animación. Cada frame es una obra de arte. La mejor película de Spider-Man hasta la fecha.",
+    "calificacion": 5,
+    "fecha": "2025-09-18"
+  },
+  {
+    "peliculaId": 7,
+    "autor": "Natalia Guzmán",
+    "comentario": "Increíble en todos los aspectos. La historia te mantiene al borde de tu asiento de principio a fin.",
+    "calificacion": 5,
+    "fecha": "2025-09-15"
+  },
+  {
+    "peliculaId": 7,
+    "autor": "Mauricio León",
+    "comentario": "Muy buena secuela. El cliffhanger final me dejó con ganas de más. Esperando ansiosamente la tercera parte.",
+    "calificacion": 4,
+    "fecha": "2025-09-12"
+  },
+  {
+    "peliculaId": 8,
+    "autor": "Valeria Salas",
+    "comentario": "¡Perfecta para toda la familia! Mis hijos la adoraron y yo también. Divertida y llena de nostalgia.",
+    "calificacion": 5,
+    "fecha": "2025-08-10"
+  },
+  {
+    "peliculaId": 8,
+    "autor": "Rodrigo Medina",
+    "comentario": "Una adaptación genial de los videojuegos. Chris Pratt hace un gran trabajo como Mario.",
+    "calificacion": 4,
+    "fecha": "2025-08-08"
+  },
+  {
+    "peliculaId": 8,
+    "autor": "Fernanda Ríos",
+    "comentario": "Muy entretenida y colorida. La música es pegajosa y los personajes son adorables.",
+    "calificacion": 4,
+    "fecha": "2025-08-05"
+  },
+  {
+    "peliculaId": 8,
+    "autor": "Héctor Ponce",
+    "comentario": "Divertida pero predecible. Aun así, vale la pena verla con la familia.",
+    "calificacion": 3,
+    "fecha": "2025-08-02"
+  }
+]

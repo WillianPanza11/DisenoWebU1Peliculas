@@ -1,87 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Detalle de Película</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container py-5">
-      <div class="text-center mb-4">
-        <h2 id="titulo" class="mb-3"></h2>
 
-        <!-- Componente: Alerta informativa -->
-        <div class="alert alert-info" role="alert">
-          ¡Disfruta del tráiler oficial y conoce más sobre esta película!
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Detalle de Película</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
 
-        <!-- Tráiler embebido -->
-        <div class="ratio ratio-16x9 mb-4">
-          <iframe id="trailer" src="" allowfullscreen></iframe>
-        </div>
+<body>
+  
+  <!-- Navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">
+      🎬 CinePlus
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">
+            🏠 Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="renta.html">
+            🎥 Rentar
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">
+            📧 Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h2 id="titulo" class="mb-3"></h2>
+
+      <!-- Componente: Alerta informativa -->
+      <div class="alert alert-info" role="alert">
+        ¡Disfruta del tráiler oficial y conoce más sobre esta película!
       </div>
 
-      <!-- Tarjeta con sinopsis e imagen -->
-      <div class="card mb-4">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img
-              id="poster"
-              src=""
-              class="img-fluid rounded-start"
-              alt="Poster de la película"
-            />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Sinopsis</h5>
-              <p id="sinopsis" class="card-text"></p>
-
-              <!-- Componente: Badge de género -->
-              <span id="genero" class="badge bg-secondary"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center">
-        <a href="../index.html" class="btn btn-secondary">Volver al inicio</a>
+      <!-- Tráiler embebido -->
+      <div class="ratio ratio-16x9 mb-4">
+        <iframe id="trailer" src="" allowfullscreen></iframe>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-      $(function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get("id");
+    <!-- Tarjeta con sinopsis e imagen -->
+    <div class="card mb-4">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img id="poster" src="" class="img-fluid rounded-start" alt="Poster de la película" />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Sinopsis</h5>
+            <p id="sinopsis" class="card-text"></p>
 
-        $.ajax({
-          url: "../data/peliculas.json",
-          method: "GET",
-          dataType: "json",
-          success: function (peliculas) {
-            const peli = peliculas.find((p) => p.id == id);
-            if (peli) {
-              $("#titulo").text(peli.titulo);
-              $("#poster").attr("src", "../img/" + peli.imagen);
-              $("#sinopsis").text(peli.sinopsis);
-              $("#trailer").attr("src", peli.trailer);
-              $("#genero").text(peli.genero);
-            } else {
-              mostrarError();
-            }
-          },
-          error: function () {
+            <!-- Componente: Badge de género -->
+            <span id="genero" class="badge bg-secondary"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: Reseñas -->
+    <div class="card mb-4">
+      <div class="card-header bg-dark text-white">
+        <h4 class="mb-0">⭐ Reseñas de Usuarios</h4>
+      </div>
+      <div class="card-body">
+        <!-- Spinner de carga -->
+        <div id="spinner-resenas" class="text-center py-4">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando reseñas...</span>
+          </div>
+          <p class="mt-2 text-muted">Cargando reseñas...</p>
+        </div>
+
+        <!-- Contenedor de reseñas -->
+        <div id="lista-resenas">
+          <!-- Las reseñas se cargarán aquí dinámicamente -->
+        </div>
+
+        <!-- Mensaje si no hay reseñas -->
+        <div id="sin-resenas" class="alert alert-info text-center" style="display: none;">
+          <p class="mb-0">Aún no hay reseñas para esta película. ¡Sé el primero en opinar!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="../index.html" class="btn btn-secondary">Volver al inicio</a>
+      <a href="renta.html" class="btn btn-primary">Rentar esta película</a>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-center text-white py-3 mt-5">
+    <small>&copy; 2025 CinePlus. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/detalle.js"></script>
+  <script>
+    $(function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+
+      $.ajax({
+        url: "../data/peliculas.json",
+        method: "GET",
+        dataType: "json",
+        success: function (peliculas) {
+          const peli = peliculas.find((p) => p.id == id);
+          if (peli) {
+            $("#titulo").text(peli.titulo);
+            $("#poster").attr("src", "../img/" + peli.imagen);
+            $("#sinopsis").text(peli.sinopsis);
+            $("#trailer").attr("src", peli.trailer);
+            $("#genero").text(peli.genero);
+          } else {
             mostrarError();
-          },
-        });
+          }
+        },
+        error: function () {
+          mostrarError();
+        },
+      });
 
-        function mostrarError() {
-          $("#detalle-pelicula").html(`
+      function mostrarError() {
+        $("#detalle-pelicula").html(`
           <div class="alert alert-danger text-center" role="alert">
             No se pudo cargar la información de la película.
           </div>
@@ -89,8 +148,9 @@
             <a href="../index.html" class="btn btn-secondary mt-3">Volver al inicio</a>
           </div>
         `);
-        }
-      });
-    </script>
-  </body>
+      }
+    });
+  </script>
+</body>
+
 </html>
